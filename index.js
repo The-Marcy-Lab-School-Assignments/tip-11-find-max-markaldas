@@ -8,9 +8,16 @@
  * - findMax([-5, -2, -10, -1]) → -1
  */
 
-const findMax = (numbers) => {
- //write your code here
+const findMax = (arr) => {
+    let firstNum = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (firstNum < arr[i]) {
+            firstNum = arr[i];
+        }
+    }
+    return firstNum;
 };
+console.log(findMax([1, 2, 3]));
 
 // Export the function for testing
 module.exports = { findMax };
